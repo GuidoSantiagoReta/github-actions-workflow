@@ -15,9 +15,9 @@ on:
 # Ejmeplo de Configuracion de variables de entorno para diferentes programas
 
      env:
-       platform: aws
-       region: us-east-1
-       account: 123456789
+      platform: aws
+      region: us-east-1
+      account: 123456789
 
 # Una ejecución de flujo de trabajo se compone de uno o más trabajos que se pueden ejecutar de forma secuencial o en paralelo
 jobs:
