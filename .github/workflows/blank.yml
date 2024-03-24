@@ -12,6 +12,13 @@ on:
   # permite ejecutar este flujo de trabajo manualmente desde la pestaña Acciones
   workflow_dispatch:
 
+# Ejmeplo de Configuracion de variables de entorno para diferentes programas
+
+     env:
+       platform: aws
+       region: us-east-1
+       account: 123456789
+
 # Una ejecución de flujo de trabajo se compone de uno o más trabajos que se pueden ejecutar de forma secuencial o en paralelo
 jobs:
   # Este flujo de trabajo contiene un único trabajo llamado "build"
@@ -21,7 +28,13 @@ jobs:
 
     # Steps(pasos) representan una secuencia de tareas que se ejecutarán como parte del trabajo.
     steps:
-      - name: "Mostrar mensajes"
+      - name: "Mostrar mensaje"
         run: echo "Mostrando mensaje con el comando run"
 
-    
+     # crear otro paso para mostrar las variables de entorno
+
+      - name: "Mostrar variables de entorno previamente definidas arriba"
+        run: |
+          echo "Valor de la variable platform: ${{ env.platform }}"
+          echo "Valor de la variable region: ${{ env.region }}"
+          echo "Valor de la variable cuenta: ${{ env.account }}"
