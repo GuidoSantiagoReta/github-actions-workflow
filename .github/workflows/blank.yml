@@ -35,6 +35,6 @@ jobs:
 
       - name: "Mostrar variables de entorno previamente definidas arriba"
         run: |
-          echo "Valor de la variable platform: ${{ env.platform }}"
-          echo "Valor de la variable region: ${{ env.region }}"
-          echo "Valor de la variable cuenta: ${{ env.account }}"
+          echo "Valor de la variable platform: $platform"
+          echo "Valor de la variable region: $region"
+          echo "Valor de la variable cuenta: $account"
